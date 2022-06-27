@@ -1,11 +1,14 @@
 import './App.css';
 import React from 'react';
-import ChaoSection from './components/ChaoSection';
+import StopWatch from './components/StopWatch';
 
-function App() {
+const App=()=>{
   return <>
-    <ChaoSection />
+    <StopWatch />
   </>
 }
 
 export default App;
+
+
+
