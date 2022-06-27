@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: 50px auto;
+  background-color: rgb(49, 49, 49);
+  border-radius: 40px;
+  font-size: 70px;
+  box-shadow: rgb(125, 125, 125) 0 0 20px 5px;
+}
+
+.zifferblatt {
+  color: rgb(255, 255, 255);
+}
+
+.btnContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px;
+  
+}
+
+.btnContainer>* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32%;
+  height: 50px;
+  border: solid aliceblue 1px;
+  border-radius: 10px;
+  color: rgb(49, 49, 49);;
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: 800;
+  box-shadow: rgb(125, 125, 125) 0 0 5px 1px ;
+}
+
+.startBtn{
+  background-color:rgba(0, 255, 153, 0.745);
+}
+
+.resetBtn{
+  background-color: rgba(255, 232, 56, 0.745);
+}
+
+.stopBtn{
+  background-color: rgba(255, 21, 0, 0.745);
+}
+

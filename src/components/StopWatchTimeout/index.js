@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import styles from './StopWatchTimeout.module.css';
 
 class StopWatchTimeout extends Component {
   constructor(props) {
     super(props);
     this.state = { time: new Date(0,0,0,0,0,0) };
     this.timeoutID = null;
+    this.onResetClicked = false;
   }
   
   tick = () => {
@@ -21,6 +23,7 @@ class StopWatchTimeout extends Component {
   }
 
   reset = () => {
+    this.onResetClicked = true;
     this.stop();
     this.setState({time:new Date(0,0,0,0,0,0)})
   }
@@ -34,7 +37,7 @@ class StopWatchTimeout extends Component {
   }
 
   componentDidUpdate = () => {
-    this.start();
+    !this.onResetClicked?this.start():this.onResetClicked=false;
   }
   
   componentWillUnmount = () => {
@@ -44,11 +47,13 @@ class StopWatchTimeout extends Component {
   render() {
     const { time } = this.state;
     return (
-      <article>
-        <h2>{time.toLocaleTimeString('it-IT')}</h2>
-        <button onClick={this.start}>START</button>
-        <button onClick={this.reset}>RESET</button>
-        <button onClick={this.stop}>STOP</button>
+      <article className={styles.container}>
+        <h2 className={styles.zifferblatt}>{time.toLocaleTimeString('it-IT')}</h2>
+        <div className={styles.btnContainer}>
+          <button className={styles.startBtn} onClick={this.start}>START</button>
+          <button className={styles.resetBtn} onClick={this.reset}>RESET</button>
+          <button className={styles.stopBtn} onClick={this.stop}>STOP</button>
+        </div>
       </article>
     );
   }
