@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class StopWatch extends Component {
+class StopWatchInterval extends Component {
   constructor(props) {
     super(props);
     this.state = { time: new Date(0,0,0,0,0,0) };
@@ -55,4 +55,4 @@ class StopWatch extends Component {
   }
 }
 
-export default StopWatch;
+export default StopWatchInterval;

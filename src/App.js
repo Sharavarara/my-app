@@ -1,10 +1,12 @@
 import './App.css';
 import React from 'react';
-import StopWatch from './components/StopWatch';
+import StopWatchInterval from './components/StopWatchInterval';
+import StopWatchTimeout from './components/StopWatchTimeout';
 
 const App=()=>{
   return <>
-    <StopWatch />
+    <StopWatchInterval />
+    <StopWatchTimeout />
   </>
 }
 
